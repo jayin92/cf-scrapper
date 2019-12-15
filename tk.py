@@ -63,7 +63,6 @@ def search_e(event):
 window = tk.Tk()
 ft_e = tkFont.Font(family="clean", size = 30)
 ft_l = tkFont.Font(family="claen", size = 25)
-print(tkFont.families())
 window.title("Codeforces Scrapper")
 # window.geometry("500x500")
 
