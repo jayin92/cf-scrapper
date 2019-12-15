@@ -10,10 +10,11 @@ import sys
 from math import ceil, floor
 base_url = "https://codeforces.com/api/user.info?handles="
 
-def print_info(handle_, rating, rank, max_rating, max_rank):
+def print_info(handle_, rating = "0", rank = "EMPTY", max_rating = "0", max_rank = "EMPTY"):
     max_len = max(len((handle_)), len(str(rating)), len(rank), len(str(max_rating)), len(max_rank))
     max_len += 17 - 6
     
+    info = ""
     print('-'* floor(max_len / 2) +" INFO " + '-'* ceil(max_len / 2))
     print("Handle         :", handle_)
     print("Current rating :", rating)
@@ -21,6 +22,15 @@ def print_info(handle_, rating, rank, max_rating, max_rank):
     print("Max rating     :", max_rating)
     print("Max rank       :", max_rank)
     print("-" * (max_len+6))
+
+    info += '-'* floor(max_len / 2) +" INFO " + '-'* ceil(max_len / 2) + '\n'
+    info += "Handle         : " + handle_ + '\n'
+    info += "Current rating : " + str(rating) + '\n'
+    info += "Current rank   : " + rank + '\n'
+    info += "Max rating     : " + str(max_rating) + '\n'
+    info += "Max rank       : " + max_rank + '\n'
+    info += "-" * (max_len+6)
+    return info
 
 def get_info(handle_):
     r = requests.get(base_url+handle_)
