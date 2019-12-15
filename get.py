@@ -22,6 +22,13 @@ def print_info(handle_, rating, rank, max_rating, max_rank):
     print("Max rank       :", max_rank)
     print("-" * (max_len+6))
 
+def get_info(handle_):
+    r = requests.get(base_url+handle_)
+
+    if r.json()["status"] == "FAILED":
+        return 0
+    
+    return r.json()["result"][0]
 
 
 if __name__ == "__main__":
@@ -29,14 +36,12 @@ if __name__ == "__main__":
 
     handle = input("Your cf handle(username) >")
 
-    r = requests.get(base_url+handle)
-    j = r.json()
-
-    if j["status"] == "FAILED":
+    if get_info(handle) == 0:
         print("Handle not found, script exiting.")
         sys.exit()
 
-    re = j["result"][0]
+    re = get_info(handle)
+
     print_info(handle, re["rating"], re["rank"], re["maxRating"], re["maxRank"])
 
 
