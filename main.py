@@ -5,8 +5,8 @@ from get import print_info
 
 window = tk.Tk()
 window.title("Codeforces Scrapper")
-ft_e = tkFont.Font(family="fixed", size = 30)
-ft_l = tkFont.Font(family="fixed", size = 25)
+ft_e = tkFont.Font(size = 30)
+ft_l = tkFont.Font(size = 25)
 
 def search_b():
     handle = e.get()
