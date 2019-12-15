@@ -1,0 +1,14 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: 警告: using a gain-root-command while being root
+dpkg-buildpackage: 源碼套件 cf-scrapper
+dpkg-buildpackage: 源碼版本 1.0-1
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: 源碼變更者： "" <jayinnn@unknown>
+ dpkg-source --before-build cf-scrapper-1.0
+dpkg-buildpackage: 主機架構 amd64
+ fakeroot debian/rules clean
+fakeroot, while creating message channels: Function not implemented
+This may be due to a lack of SYSV IPC support.
+fakeroot: error while starting the `faked' daemon.
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+dpkg-buildpackage: 錯誤: fakeroot debian/rules clean gave error exit status 1
