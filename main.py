@@ -1,11 +1,13 @@
 import tkinter as tk
 import tkinter.font as tkFont
+from tkinter import PhotoImage
+
 from get import get_info
 from get import print_info
 
 window = tk.Tk()
 window.title("Codeforces Scrapper")
-window.iconbitmap("favicon.ico")
+window.iconphoto(True, PhotoImage(file="favicon.png"))
 ft_e = tkFont.Font(family = "Consolas", size = 30)
 ft_l = tkFont.Font(family = "Consolas", size = 25)
 
