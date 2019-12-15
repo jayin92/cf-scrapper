@@ -14,15 +14,16 @@ def print_info(handle_, rating = "0", rank = "EMPTY", max_rating = "0", max_rank
     max_len = max(len((handle_)), len(str(rating)), len(rank), len(str(max_rating)), len(max_rank))
     max_len += 17 - 6
     
-    info = ""
-    print('-'* floor(max_len / 2) +" INFO " + '-'* ceil(max_len / 2))
-    print("Handle         :", handle_)
-    print("Current rating :", rating)
-    print("Current rank   :", rank)
-    print("Max rating     :", max_rating)
-    print("Max rank       :", max_rank)
-    print("-" * (max_len+6))
+    if __name__ == "__main__":
+        print('-'* floor(max_len / 2) +" INFO " + '-'* ceil(max_len / 2))
+        print("Handle         :", handle_)
+        print("Current rating :", rating)
+        print("Current rank   :", rank)
+        print("Max rating     :", max_rating)
+        print("Max rank       :", max_rank)
+        print("-" * (max_len+6))
 
+    info = ""
     info += '-'* floor(max_len / 2) +" INFO " + '-'* ceil(max_len / 2) + '\n'
     info += "Handle         : " + handle_ + '\n'
     info += "Current rating : " + str(rating) + '\n'

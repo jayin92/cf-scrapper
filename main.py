@@ -5,8 +5,9 @@ from get import print_info
 
 window = tk.Tk()
 window.title("Codeforces Scrapper")
-ft_e = tkFont.Font(size = 30)
-ft_l = tkFont.Font(size = 25)
+window.iconbitmap("favicon.ico")
+ft_e = tkFont.Font(family = "Consolas", size = 30)
+ft_l = tkFont.Font(family = "Consolas", size = 25)
 
 def search_b():
     handle = e.get()
@@ -39,7 +40,6 @@ def search_e(event):
 
 
 
-# window.geometry("500x500")
 
 username_lab = tk.Label(text="CF Handle", font=ft_l)
 username_lab.pack(side=tk.LEFT, padx=10)
