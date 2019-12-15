@@ -1,14 +1,16 @@
- dpkg-buildpackage -rfakeroot -D -us -uc
-dpkg-buildpackage: 警告: using a gain-root-command while being root
-dpkg-buildpackage: 源碼套件 cf-scrapper
-dpkg-buildpackage: 源碼版本 1.0-1
-dpkg-buildpackage: source distribution unstable
-dpkg-buildpackage: 源碼變更者： "" <jayinnn@unknown>
+ dpkg-buildpackage -rfakeroot -us -uc -ui
+dpkg-buildpackage: warning: using a gain-root-command while being root
+dpkg-buildpackage: info: source package cf-scrapper
+dpkg-buildpackage: info: source version 1.0-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by "" <jayinnn@unknown>
  dpkg-source --before-build cf-scrapper-1.0
-dpkg-buildpackage: 主機架構 amd64
+dpkg-buildpackage: info: host architecture amd64
  fakeroot debian/rules clean
-fakeroot, while creating message channels: Function not implemented
-This may be due to a lack of SYSV IPC support.
-fakeroot: error while starting the `faked' daemon.
-kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
-dpkg-buildpackage: 錯誤: fakeroot debian/rules clean gave error exit status 1
+dh clean --with=python3
+dh: unable to load addon python3: Can't locate Debian/Debhelper/Sequence/python3.pm in @INC (you may need to install the Debian::Debhelper::Sequence::python3 module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.26.1 /usr/local/share/perl/5.26.1 /usr/lib/x86_64-linux-gnu/perl5/5.26 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.26 /usr/share/perl/5.26 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at (eval 8) line 1.
+BEGIN failed--compilation aborted at (eval 8) line 1.
+
+debian/rules:4: recipe for target 'clean' failed
+make: *** [clean] Error 2
+dpkg-buildpackage: error: fakeroot debian/rules clean subprocess returned exit status 2
