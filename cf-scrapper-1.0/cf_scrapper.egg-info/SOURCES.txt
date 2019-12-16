@@ -1,0 +1,6 @@
+cf-scrapper.py
+setup.py
+cf_scrapper.egg-info/PKG-INFO
+cf_scrapper.egg-info/SOURCES.txt
+cf_scrapper.egg-info/dependency_links.txt
+cf_scrapper.egg-info/top_level.txt
