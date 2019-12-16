@@ -1,6 +1,7 @@
 MANIFEST.in
 cf-scrapper
 favicon.png
+setup.cfg
 setup.py
 cf_scrapper.egg-info/PKG-INFO
 cf_scrapper.egg-info/SOURCES.txt

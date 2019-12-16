@@ -1,0 +1,10 @@
+Package: python3-cf-scrapper
+Source: cf-scrapper
+Version: 1.0-1
+Architecture: all
+Maintainer: jayinnn <jayin920805@gmail.com>
+Installed-Size: 18
+Depends: python3:any
+Section: python
+Priority: optional
+Description: A tool to check user's info on Codeforces

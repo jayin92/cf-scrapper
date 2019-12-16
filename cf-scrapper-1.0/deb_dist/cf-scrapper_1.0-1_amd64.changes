@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Mon, 16 Dec 2019 12:52:12 +0800
+Source: cf-scrapper
+Binary: python3-cf-scrapper
+Architecture: all
+Version: 1.0-1
+Distribution: unstable
+Urgency: low
+Maintainer: jayinnn <jayin920805@gmail.com>
+Changed-By: jayinnn <jayin920805@gmail.com>
+Description:
+ python3-cf-scrapper - A tool to check user's info on Codeforces
+Changes:
+ cf-scrapper (1.0-1) unstable; urgency=low
+ .
+   * source package automatically created by stdeb 0.9.0
+Checksums-Sha1:
+ c1cd271ef92afa48bf95c60b8e40c0acc78ac037 6115 cf-scrapper_1.0-1_amd64.buildinfo
+ 2ca79c932469871843af9442fda2a575b8409dd5 2492 python3-cf-scrapper_1.0-1_all.deb
+Checksums-Sha256:
+ 4e9cee921534a3a491725a803854c261b5381ad7cf7df5d1070e5302887fda92 6115 cf-scrapper_1.0-1_amd64.buildinfo
+ 51a64b649f9ae733a6372dddc178d8d022406b209019374c26f201d2e09a239a 2492 python3-cf-scrapper_1.0-1_all.deb
+Files:
+ 8b9bf888d0233f4f87d4e797849ab57e 6115 python optional cf-scrapper_1.0-1_amd64.buildinfo
+ 26e714b6fad661e088d8e5e22a1a5c12 2492 python optional python3-cf-scrapper_1.0-1_all.deb

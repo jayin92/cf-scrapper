@@ -1,0 +1,17 @@
+Source: cf-scrapper
+Maintainer: jayinnn <jayin920805@gmail.com>
+Section: python
+Priority: optional
+Build-Depends: python3-setuptools, python3-all, debhelper (>= 7.4.3)
+Standards-Version: 3.9.1
+
+
+
+
+
+Package: python3-cf-scrapper
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: A tool to check user's info on Codeforces
+
+

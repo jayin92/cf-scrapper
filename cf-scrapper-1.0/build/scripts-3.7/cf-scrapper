@@ -1,12 +1,40 @@
+#!python
+
 import tkinter as tk
 import tkinter.font as tkFont
 from tkinter import PhotoImage
-from get import get_info
-from get import print_info
+import requests
+import json
+import sys 
+from math import ceil, floor
+base_url = "https://codeforces.com/api/user.info?handles="
+
+def print_info(handle_, rating = "0", rank = "EMPTY", max_rating = "0", max_rank = "EMPTY"):
+    max_len = max(len((handle_)), len(str(rating)), len(rank), len(str(max_rating)), len(max_rank))
+    max_len += 17 - 6
+
+    info = ""
+    info += '-'* floor(max_len / 2) +" INFO " + '-'* ceil(max_len / 2) + '\n'
+    info += "Handle         : " + handle_ + '\n'
+    info += "Current rating : " + str(rating) + '\n'
+    info += "Current rank   : " + rank + '\n'
+    info += "Max rating     : " + str(max_rating) + '\n'
+    info += "Max rank       : " + max_rank + '\n'
+    info += "-" * (max_len+6)
+    return info
+
+def get_info(handle_):
+    r = requests.get(base_url+handle_)
+
+    if r.json()["status"] == "FAILED":
+        return 0
+    
+    return r.json()["result"][0]
+
 
 window = tk.Tk()
 window.title("Codeforces Scrapper")
-window.iconphoto(True, PhotoImage(file="favicon.png"))
+window.iconphoto(True, PhotoImage(file="../favicon.png"))
 ft_e = tkFont.Font(family = "Consolas", size = 30)
 ft_l = tkFont.Font(family = "Consolas", size = 25)
 
