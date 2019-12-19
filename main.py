@@ -24,7 +24,7 @@ def search_b():
         except:
             info_lab.configure(text = print_info(handle))
     else:
-        info_lab.configure(text = "User Not Found")
+        info_lab.configure(text = "User Not Found.")
 def search_e(event):
     handle = e.get()
     e.delete(0, 'end')
@@ -38,7 +38,7 @@ def search_e(event):
         except:
             info_lab.configure(text = print_info(handle))
     else:
-        info_lab.configure(text = "User Not Found")
+        info_lab.configure(text = "User Not Found.")
 
 
 
